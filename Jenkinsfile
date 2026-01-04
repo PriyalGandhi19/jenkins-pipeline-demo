@@ -29,21 +29,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Compiling source code...'
-                sh 'echo Build successful > build_report.txt'
+                bat 'echo Build successful > build_report.txt'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Executing unit tests...'
-                sh 'echo All tests passed >> build_report.txt'
+                bat 'echo All tests passed >> build_report.txt'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
-                sh 'echo Deployment completed >> build_report.txt'
+                bat 'echo Deployment completed >> build_report.txt'
             }
         }
     }
